@@ -45,6 +45,14 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+
+        cordova.exec(
+          function() { console.log("success") },
+          function() { console.log("fail") },
+          "MyPlugin",
+          "test",
+          ["おはよう、世界"]
+        )
     }
 };
 
